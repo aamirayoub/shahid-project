@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <title>Indicators</title>
+    </head>
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Eighth navbar example">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="logo.png" alt="" width="150" height="150" class="rounded-circle"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bot.html">Trading Bot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="indicators.html">Indicators</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="account.html">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          </form>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-primary me-2" id="LoginBtn" data-bs-toggle="modal" data-bs-target="#modalSignin">Sign-up</button>
+            <button type="button" class="btn btn-primary me-2" id="signinBtn" data-bs-toggle="modal" data-bs-target="#modalLoginin">login</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                 <!-- modal -->
+      <div class="modal fade bg-body-secondary" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="modal-dialog">
+
+            <!-- modal content -->
+          <div class="modal-content rounded-4 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+              <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- input fields -->
+            <div class="modal-body p-5 pt-0">
+              <form class="" id="modalForm">
+
+                <!-- email -->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control rounded-3" id="email" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+
+                <!-- password -->
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control rounded-3" id="password" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+
+                <div id="error-msg" class="alert alert-danger d-none">Please fill out all fields correctly!</div>
+
+                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="SignUpbtn">Sign up</button>
+                
+                <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+                <hr class="my-4">
+                <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                  <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
+                  Sign up with Twitter
+                </button>
+                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                  <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+                  Sign up with Facebook
+                </button>
+                <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                  <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+                  Sign up with GitHub
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        </header>
+      </div>
+      
+      <!-- signin modal -->
+      <div class="modal fade bg-body-secondary" tabindex="-1" role="dialog" id="modalLoginin">
+        <div class="modal-dialog" role="document" id="">
+          <div class="modal-content rounded-4 shadow" style="width: 100%; height: 100%;">
+            <div class="modal-header border-bottom-0">
+              <h1 class="modal-title fs-5">Login</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-0">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+            
+              <div class="form-check text-start my-3">
+                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Remember me
+                </label>
+              </div>
+              <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+              <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- overview -->
+      
+      <div class="overview">
+        <div class="sidebar-icon">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+            <!-- sidebar -->
+    <div class="flex-shrink-0 p-3" style="width: 280px;">
+      <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+        <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-5 fw-semibold">Indicators</span>
+        
+      </a>
+      <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Home
+          </button>
+          <div class="collapse show" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded ">Overview</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded" id="macd" data-bs-toggle="modal" data-bs-target="#macdmodal">MACD</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded" id="qqe" data-bs-toggle="modal" data-bs-target="#qqemodal">QQE</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            Dashboard
+          </button>
+          <div class="collapse" id="dashboard-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+            Orders
+          </button>
+          <div class="collapse" id="orders-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="border-top my-3"></li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+            Account
+          </button>
+          <div class="collapse" id="account-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MACD Modal -->
+    <div class="modal fade bg-body-secondary" tabindex="-1" role="dialog" id="macdmodal">
+    <div class="modal-dialog" role="document" id="">
+      <div class="modal-content rounded-4 shadow" style="width: 100%; height: 100%;">
+        <div class="modal-header border-bottom-0">
+          <h1 class="modal-title fs-5">MACD Indicator</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-0">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque asperiores velit quasi nesciunt voluptates, maiores exercitationem suscipit aspernatur voluptas aliquid, nam maxime? Vero sapiente libero esse provident, eos modi ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nobis. Aliquam non minima facere sed quidem qui et enim, impedit corporis, rerum laborum? Quia, nobis? Sunt dolorum dicta sapiente molestiae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nulla dolores earum iste voluptatem! Optio asperiores qui nam veritatis repellendus ea modi sed nostrum aliquam necessitatibus totam dignissimos, nesciunt saepe!
+            <ul>Features
+              <li>feature1</li>
+              <li>feature2</li>
+              <li>feature3</li>
+              <li>feature4</li>
+            </ul>
+
+          </p>
+        </div>
+        <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+          <button type="button" class="btn btn-lg btn-primary">Buy Now</button>
+         <button type="button" class="btn btn-lg btn-primary"><a href="macd.html" style="color: #fff;">Read more</a></button>
+          <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QQE Modal -->
+
+  <div class="modal fade bg-body-secondary" tabindex="-1" role="dialog" id="qqemodal">
+    <div class="modal-dialog" role="document" id="">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header border-bottom-0">
+          <h1 class="modal-title fs-5">QQE Indicator</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-0">
+          <p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque asperiores velit quasi nesciunt voluptates, maiores exercitationem suscipit aspernatur voluptas aliquid, nam maxime? Vero sapiente libero esse provident, eos modi ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nobis. Aliquam non minima facere sed quidem qui et enim, impedit corporis, rerum laborum? Quia, nobis? Sunt dolorum dicta sapiente molestiae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nulla dolores earum iste voluptatem! Optio asperiores qui nam veritatis repellendus ea modi sed nostrum aliquam necessitatibus totam dignissimos, nesciunt saepe!
+            <ul>Features
+              <li>feature1</li>
+              <li>feature2</li>
+              <li>feature3</li>
+              <li>feature4</li>
+            </ul>   
+        </div>
+        <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+          <button type="button" class="btn btn-lg btn-primary">Buy Now</button>
+          <button type="button" class="btn btn-lg btn-primary"><a href="qqe.html" style="color: #fff;">Read more</a></button>
+          
+          <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+        
+        
+        <!-- overview section -->
+         <div class="overview-section">
+        <p>An indicator's main role in trading is to help traders interpret price action by processing raw market data—like price, volume, or open interest—into a visual or numerical format that provides insights into market trends, momentum, volatility, and potential reversal points. Here’s a breakdown of how indicators work to enhance trading decisions:</p>
+
+      <ul>
+        <li>
+          Processing Historical Data
+        Indicators analyze past data, such as closing prices, trading volumes, or price highs and lows, to identify patterns and provide information about potential future price movements.
+        For example, a Moving Average (MA) indicator calculates the average closing price over a set period (e.g., 50 days) and plots this as a line on the chart. This line helps traders see if the asset’s price is in an uptrend, downtrend, or stable.
+        </li>
+        <li>
+          Identifying Market Trends
+          Trend indicators work by smoothing out price data to reveal the general direction of a market—whether it's trending upwards, downwards, or moving sideways.
+          The Moving Average Convergence Divergence (MACD) indicator, for instance, identifies changes in the strength, direction, and duration of a trend by comparing short-term and long-term moving averages of the price. When these averages cross, it can signal a change in trend direction.
+        </li>
+        <li>
+          Measuring Momentum
+        Momentum indicators measure the speed of price changes, helping traders understand if a trend has the strength to continue.
+        The Relative Strength Index (RSI), a popular momentum indicator, calculates recent price gains relative to losses over a certain period (often 14 days). It then presents this information as a value between 0 and 100. A reading above 70 indicates the asset may be overbought, suggesting a potential reversal, while a reading below 30 suggests oversold conditions.
+        </li>
+        <li>
+          Determining Volatility
+          Volatility indicators measure the degree of variation in asset prices over a specific timeframe, providing insights into potential price breakout opportunities.
+          Bollinger Bands, a widely used volatility indicator, consist of three lines: a simple moving average (SMA) in the middle and two outer bands representing standard deviations from the SMA. When the bands expand, volatility is high; when they contract, volatility is low. Price touching the outer bands can signal potential reversal or breakout points.
+        </li>
+        <li>
+          Highlighting Support and Resistance Levels
+        Indicators can identify price levels where buying or selling interest historically holds strong. These levels act as psychological barriers, where price changes tend to slow or reverse.
+        Fibonacci Retracement Levels, for example, calculate potential support and resistance levels based on ratios derived from the Fibonacci sequence. Traders use these levels to identify points where the price might retrace before continuing in the original direction.
+        </li>
+        <li>
+          Providing Buy and Sell Signals
+        Many indicators generate clear buy and sell signals based on specific criteria. These signals are often used with other indicators to confirm decisions and avoid false signals.
+        For instance, in the MACD indicator, a “bullish crossover” (when the MACD line crosses above the signal line) may indicate a buy signal, whereas a “bearish crossover” (when it crosses below) suggests a sell signal.
+        </li>
+      </ul>
+        <!-- <h3>In Summary</h3>
+        <p>An indicator's work centers around translating complex market data into more understandable signals, showing patterns and trends that may not be visible in raw price action alone. While they do not predict the future with certainty, indicators offer traders data-driven insights to aid in decision-making and risk management. Using them effectively involves combining indicators and analyzing them within the context of broader market factors.</p> -->
+      </div>
+  </div>
+
+
+  
+</main>
+
+<!-- footer -->
+<div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Company</h5>
+        <ul class="nav flex-column">
+      
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Features</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Trading Bot</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Trading Academy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indicators</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Links</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Trading book</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2024 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

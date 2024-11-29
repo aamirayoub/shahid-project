@@ -1,0 +1,146 @@
+body{
+    /* background-image: url('/backgroud2.jpg'); */
+    /* background-color: whitesmoke;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+    /* background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%); */
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+
+    
+
+    /* color: white; */
+
+}
+
+.carousel-item > img{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+.contact-section{
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: space-between;
+    
+   
+    
+
+}
+
+/* media queries */
+@media (max-width: 600px) {
+    .contact-section{
+        width: 90vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .contact-svg > img{
+        height: 25vh;
+        
+      }
+
+    .carousel-item img{
+        height: 50vh;
+    }
+
+    a > i{
+        font-size: 10vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+    }
+    
+}
+.links{
+   
+    margin-top: 100px;
+   margin-left: 50px;
+   width: 30vw;
+   height: 50vh;
+   display: grid;
+   grid-template-columns: 2fr 2fr;
+  
+}
+
+
+.contact-svg > img{
+  width: 50vw;
+  mix-blend-mode:darken;
+  
+}
+.overview{
+    display: flex;
+    
+
+}
+
+.overview-section{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+a > i{
+    font-size: 5vw;
+}
+
+.menu{
+    /* display: none; */
+}
+
+.top-nav{
+    position: relative;
+}
+.top-nav a{
+    display: block;
+}
+
+.sidebar-icon{
+    cursor: pointer;
+}
+.sidebar-icon > i{
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+}
+.flex-shrink-0{
+    display: none;
+    
+}
+
+.modal {
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+
+}
+
+.card-header, .card-body{
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);}
+
+.table{
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);}
+
+img{
+    border-radius: 4px ;
+    box-shadow: 5px 5px 10px white ;
+}
+
+.col-lg-4 > img{
+    box-shadow: 5px 5px 10px rgb(2, 2, 63) ;
+}
+a > img{
+    box-shadow: none;
+    
+}
